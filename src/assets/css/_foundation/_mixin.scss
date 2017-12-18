@@ -1,0 +1,57 @@
+/*==========================
+       break-points
+==========================*/
+
+@mixin mq-small-sp-only { //iphone5　size
+  @media (max-width: $xs-width) {
+    @content
+  }
+}
+
+@mixin mq-sp-only { //iphone↓　size
+  @media (max-width: $s-width - 1px) {
+    @content
+  }
+}
+
+@mixin mq-small-pc-only { //ipad - ipadPro　size
+  @media (min-width: $s-width) and (max-width: $m-width) {
+    @content
+  }
+}
+
+@mixin mq-large-pc-only { //1025px↑　size
+  @media (min-width: $l-width + 1px) {
+    @content
+  }
+}
+
+
+/*==========================
+          css grid
+==========================*/
+
+// CSS Grid Layoutで複数の行を指定するmixin
+@mixin create-grid-column-span($start, $end) {
+  grid-column-start: $start;
+  grid-column-end: $end;
+  -ms-grid-column-span: $end - $start;
+}
+
+// CSS Grid Layoutで複数の列を指定するmixin
+@mixin create-grid-row-span($start, $end) {
+  grid-row-start: $start;
+  grid-row-end: $end;
+  -ms-grid-row-span: $end - $start;
+}
+
+
+/*==========================
+           mixin
+==========================*/
+
+@mixin textHidden {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}

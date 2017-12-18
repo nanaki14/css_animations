@@ -1,0 +1,289 @@
+.loadAnim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: $base-color;
+  }
+
+  .loadAnim__inner {
+    width: 100%;
+    height: 100%;
+
+    &:before,
+    &:after {
+      content: '';
+      background-color: $base-color;
+    }
+  }
+
+  .welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0px 30px;
+    font-family: $julius;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 10px;
+    transform: translate(-50%, -50%);
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      background-color: $base-color;
+    }
+    &:before {
+      top: -15px;
+      animation: 1.65s .5s welcomeBdrLeft $ease-in-out-quad both;
+    }
+    &:after {
+      bottom: -15px;
+      animation: 1.65s .5s welcomeBdrRight $ease-in-out-quad both;
+    }
+  }
+  .welcome__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .welcome__text {
+    transform: translateY(100%);
+    animation: 2s welcomeText $ease-in-out-quad both;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation: 1.2s #{($i - 1)*0.1 + .5}s welcomeText $ease-in-out-quad both;
+      }
+    }
+
+    @keyframes welcomeText {
+      0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      15% {
+        opacity: 1;
+      }
+      20% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
+    @keyframes welcomeBdrLeft {
+      0% {
+        transform-origin: 0 0;
+        transform: scale(0);
+      }
+      40% {
+        transform-origin: 0 0;
+        transform: scale(1);
+      }
+      70% {
+        transform-origin: 100% 0;
+        transform: scale(1);
+      }
+      100% {
+        transform-origin: 100% 0;
+        transform: scale(0);
+      }
+    }
+    @keyframes welcomeBdrRight {
+      0% {
+        transform-origin: 100% 0;
+        transform: scale(0);
+      }
+      40% {
+        transform-origin: 100% 0;
+        transform: scale(1);
+      }
+      70% {
+        transform-origin: 0 0;
+        transform: scale(1);
+      }
+      100% {
+        transform-origin: 0 0;
+        transform: scale(0);
+      }
+    }
+  }
+
+
+  .animText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    animation: 0.4s 5.55s animTextScale $ease-in-out-quart both;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $base-color;
+      transform-origin: 0 0;
+      transform: scale(0);
+      animation: 0.5s 4.5s animTextOutBdr $ease-in-out-quart both;
+    }
+    &:before {
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      width: 1px;
+      height: 100%;
+    }
+  }
+  .animText__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    animation: 0.4s 5.1s animTextShadow $ease-in-out-quart both;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $base-color;
+      transform-origin: 100% 100%;
+      transform: scale(0);
+      animation: 0.5s 4.5s animTextOutBdr $ease-in-out-quart both;
+    }
+    &:before {
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      width: 1px;
+      height: 100%;
+    }
+
+    @keyframes animTextOutBdr {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes animTextScale {
+      0% {
+        transform-origin: 50% 0;
+        transform: scaleX(1) translate(-50%, -50%);
+      }
+      100% {
+        transform-origin: 50% 0;
+        transform: scaleX(0) translate(-50%, -50%);
+      }
+    }
+    @keyframes animTextShadow {
+      0% {
+        box-shadow: 0 0 0 0 $base-color inset;
+      }
+      100% {
+        box-shadow: 0 0 0 250px $base-color inset;
+      }
+    }
+  }
+  .animText__row {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 0;
+      background-color: $base-color;
+      transform-origin: 100% 0;
+      animation: 1.5s 2.5s animTextBbr $ease-in-out-quart both;
+    }
+    &:nth-child(2) {
+      &:after {
+        left: inherit;
+        right: 0;
+        transform-origin: 0 0;
+        animation: 1.5s 2.5s animTextBbr $ease-in-out-quart both;
+      }
+    }
+    @keyframes animTextBbr {
+      0% {
+        width: 1px;
+        height: 0;
+      }
+      25% {
+        width: 1px;
+        height: 100%;
+      }
+      30% {
+        width: 1px;
+        height: 100%;
+      }
+      70% {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(1);
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+      }
+    }
+  }
+  .animText__main {
+    color: $base-color;
+    font-family: $julius;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: 1.5s 2.5s animTextMain linear both;
+    @keyframes animTextMain {
+      0% {
+        opacity: 0;
+      }
+      80% {
+        opacity: 0;
+      }
+      81% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+//margin - line-heightの半分
+//autoSpace(最終的に空いて欲しい値, そいつのfz, そいつのlh)
+@function autoSpace($num:0, $fz:14px, $lh:1.5){
+  @if not ($num == 0 and $fz == '1.6rem' and $lh == 1.6){
+    //px変換し、単位を除く値のみを取得
+    $fz: ($fz / ((floor($fz) * 2) % 2 + 1)) * 10;
+    @return $num - (($lh * $fz - $fz)/2) + px;
+  } @else {
+    @return $num + px;
+  }
+}
+
+//line-heightの半分を打ち消すネガティブマージンで打ち消す
+@function halfLineHeight($fz:$fz, $lh:$lh){
+  $fz: ($fz / ((floor($fz) * 2) % 2 + 1)) * 10;
+  @return (($fz * $lh) - $fz) / 2 + px;
+}
+
+//要素のパーセント求める(マージン、パディングなんでも使えるアレ)
+//percentSpace(自分の幅, 親の幅)
+@function percentSpace($thisWidth, $rootWidth) {
+  @return $thisWidth / $rootWidth * 100%;
+}
+
+//z-indexの配列index取る
+@function z($name) {
+  @return index($z-index, $name);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "document",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-ejs": "^3.0.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^5.2.2",
+    "jquery": "^3.2.1",
+    "jquery.easing": "^1.4.1",
+    "picturefill": "^3.0.2"
+  }
+}
