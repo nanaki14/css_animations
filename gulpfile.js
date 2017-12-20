@@ -17,7 +17,7 @@ const changed = require('gulp-changed');
 const browserSync = require('browser-sync').create();
 
 const baseDir = {
-  dest: 'dist',
+  dest: 'html',
   sass: 'src/**/*.scss',
   js: 'src/**/*.js',
   ejs: 'src/**.ejs',
