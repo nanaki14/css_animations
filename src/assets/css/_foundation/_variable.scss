@@ -30,7 +30,7 @@ $z-index: (
 /*font-family
 ==========================*/
 $san-serif : -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
-$julius : 'Julius Sans One', sans-serif;
+$julius : 'Julius Sans One',-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 
 /*font-size
 ==========================*/
