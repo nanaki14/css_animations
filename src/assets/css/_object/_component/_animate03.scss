@@ -1,0 +1,47 @@
+
+.animate03 {
+  height: 100%;
+  .text__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+  }
+  .text__cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: $julius;
+    font-size: 3.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transform-origin: 100% 100%;
+    }
+  }
+  &:hover {
+    .text__cell {
+      transform: scaleX(1);
+      transition: .3s $ease-in-out-quad;
+      &:after {
+        transform: scaleX(0);
+        transition: .3s .4s $ease-in-out-quad;
+      }
+    }
+  }
+}

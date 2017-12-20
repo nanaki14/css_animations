@@ -1,25 +1,42 @@
+.article__wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  transform: translateX(15px);
+  overflow: auto;
+}
+
 .article__unit {
-  display: grid;
-  grid-template-rows: 300px 300px;
-  grid-template-columns: 300px 300px 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 850px;
 }
 
 .article {
-  border: 1px solid $base-color;
+  width: 400px;
+  height: 400px;
+  margin: 25px 0;
+  border: 2px solid $base-color;
   transform: rotate(45deg);
   cursor: pointer;
 
-  &:nth-child(3),
-  &:nth-child(6) {
-    animation: .35s 9.6s articleRotate cubic-bezier(.42,.52,.18,1) both;
+  &:nth-child(-n+2) {
+    margin-top: 90px;
   }
-  &:nth-child(2),
-  &:nth-child(5) {
-    animation: .35s 9.7s articleRotate cubic-bezier(.42,.52,.18,1) both;
+  &:nth-child(2n+1) {
+    margin-right: 50px;
   }
-  &:nth-child(1),
-  &:nth-child(4) {
-    animation: .35s 9.8s articleRotate cubic-bezier(.42,.52,.18,1) both;
+  &:nth-last-child(-n+2) {
+    margin-bottom: 100px;
+  }
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation: .35s #{9.6 + (($i - 1)/10)}s articleRotate cubic-bezier(.42,.52,.18,1) both;
+    }
   }
 }
 

@@ -8,9 +8,11 @@
   @keyframes pointerOn {
     0% {
       pointer-events: inherit;
+      z-index: 1;
     }
     100% {
       pointer-events: none;
+      z-index: -1;
     }
   }
 
@@ -183,7 +185,7 @@
   .animBorder__main {
     position: absolute;
     top: 0;
-    width: 20.1%;
+    width: 21%;
     height: 100%;
     background-color: $base-color;
     transform-origin: 50% 0;

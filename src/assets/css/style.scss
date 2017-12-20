@@ -8,7 +8,7 @@
 @import "_foundation/function";
 @import "_foundation/mixin";
 @import "_foundation/reset";
-@import "_foundation/animation";
+@import "_foundation/openingAnimation";
 
 /*==========================
            utility
@@ -28,8 +28,16 @@
 /*==========================
           component
 ==========================*/
+@import "_object/_component/about";
 @import "_object/_component/article";
 @import "_object/_component/loadAnim";
+
+// animations
+@import "_object/_component/animate01";
+@import "_object/_component/animate02";
+@import "_object/_component/animate03";
+@import "_object/_component/animate04";
+@import "_object/_component/animate05";
 
 
 /*==========================

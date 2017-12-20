@@ -6,6 +6,7 @@
   width: 100%;
   min-width: 1200px;
   height: 100%;
+  padding: 34px;
   &:before,
   &:after {
     content: '';
@@ -30,11 +31,7 @@
   }
 }
 .main__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% - 68px);
-  height: calc(100% - 68px);
-  padding: 20px;
-  overflow: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

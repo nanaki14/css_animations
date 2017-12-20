@@ -1,0 +1,53 @@
+.animate05 {
+  padding: 170px 0;
+  .text__row {
+
+  }
+  .text__cell {
+    display: inline-block;
+    padding: 15px 15px;
+    background-color: #333;
+    color: #fff;
+    font-family: $julius;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+
+    span {
+      display: inline-block;
+      transform: translateX(calc(-100% - 15px));
+    }
+  }
+
+  &:hover {
+    .text__row {
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          .text__cell {
+            animation: .3s #{0.05 * ($i - 1)}s ease-in slideTextBg both;
+            span {
+              animation: .3s #{0.15 + 0.05 *($i - 1)}s ease-out slideTextIn both;
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes slideTextBg {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes slideTextIn {
+    0% {
+      transform: translateX(calc(-100% - 15px));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
