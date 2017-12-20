@@ -8,6 +8,7 @@
 @import "_foundation/function";
 @import "_foundation/mixin";
 @import "_foundation/reset";
+@import "_foundation/animation";
 
 /*==========================
            utility
@@ -17,7 +18,7 @@
 /*==========================
           layout
 ==========================*/
-
+@import "_layout/main";
 
 /*==========================
           project
@@ -27,6 +28,7 @@
 /*==========================
           component
 ==========================*/
+@import "_object/_component/article";
 @import "_object/_component/loadAnim";
 
 

@@ -1,0 +1,40 @@
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: $base-color;
+    z-index: -1;
+  }
+  &:before {
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    border-width: 6px;
+  }
+  &:after {
+    top: 32px;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    border-width: 2px;
+  }
+}
+.main__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 68px);
+  height: calc(100% - 68px);
+  padding: 20px;
+  overflow: auto;
+}

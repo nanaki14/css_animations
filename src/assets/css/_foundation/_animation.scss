@@ -1,0 +1,163 @@
+@keyframes welcomeText {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes welcomeBdrLeft {
+  0% {
+    transform-origin: 0 0;
+    transform: scale(0);
+  }
+  40% {
+    transform-origin: 0 0;
+    transform: scale(1);
+  }
+  70% {
+    transform-origin: 100% 0;
+    transform: scale(1);
+  }
+  100% {
+    transform-origin: 100% 0;
+    transform: scale(0);
+  }
+}
+@keyframes welcomeBdrRight {
+  0% {
+    transform-origin: 100% 0;
+    transform: scale(0);
+  }
+  40% {
+    transform-origin: 100% 0;
+    transform: scale(1);
+  }
+  70% {
+    transform-origin: 0 0;
+    transform: scale(1);
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes animTextOutBdr {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animTextScale {
+  0% {
+    transform-origin: 50% 0;
+    transform: scaleX(1) translate(-50%, -50%);
+  }
+  100% {
+    transform-origin: 50% 0;
+    transform: scaleX(0) translate(-50%, -50%);
+  }
+}
+@keyframes animTextShadow {
+  0% {
+    box-shadow: 0 0 0 0 $base-color inset;
+  }
+  100% {
+    box-shadow: 0 0 0 250px $base-color inset;
+  }
+}
+
+@keyframes animTextBbr {
+  0% {
+    width: 1px;
+    height: 0;
+  }
+  25% {
+    width: 1px;
+    height: 100%;
+  }
+  30% {
+    width: 1px;
+    height: 100%;
+  }
+  70% {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(1);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes animTextMain {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  81% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animBorderOut {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes articleRotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes basicOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes articleShadow {
+  0% {
+    box-shadow: 0 0 0 150px $base-color inset;
+  }
+  100% {
+    box-shadow: 0 0 0 0 $base-color inset;
+  }
+}
