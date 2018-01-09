@@ -32,6 +32,7 @@
     "imagemin-svgo": "^5.2.2",
     "jquery": "^3.2.1",
     "jquery.easing": "^1.4.1",
+    "node-sass": "^4.7.2",
     "picturefill": "^3.0.2"
   }
 }
